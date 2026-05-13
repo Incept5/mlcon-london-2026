@@ -1,0 +1,47 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Java / Maven
+target/
+*.class
+*.jar
+*.war
+*.log
+hs_err_pid*
+
+# Gradle
+.gradle/
+build/
+
+# Python (in case any exercises use it)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Node (in case any exercises use it)
+node_modules/
+npm-debug.log*
+
+# Environment / secrets
+.env
+.env.local
+*.local
+secrets/
+
+# Teacher-only notes (not for students)
+TEACHER_NOTES.md
+
+# Vector DBs
+chroma_db/

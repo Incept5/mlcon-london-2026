@@ -1,0 +1,36 @@
+# Day 1 dependencies
+anthropic
+gradio
+groq
+llama-cpp-python
+lmstudio
+matplotlib
+mistralai
+mlx-vlm
+numpy
+ollama
+openai
+plotly
+python-dotenv
+requests
+rich
+scikit-learn
+sentence-transformers
+tabulate
+tensorflow
+together
+torch
+transformers
+urllib3<2
+
+# Day 2 dependencies
+beautifulsoup4
+chromadb
+httpx
+kagglehub
+mcp
+mlx-audio
+pandas
+Pillow
+textblob
+tiktoken
