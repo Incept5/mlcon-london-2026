@@ -53,7 +53,7 @@ if __name__ == '__main__':
         embeddings = generate_and_store_embeddings(all_words)
         print("Embeddings generated and cached.")
 
-    target_words = ['tea', 'coffee', 'mud', 'dirt', "pretzel", "grape"]
+    target_words = ['tea', 'coffee', 'mud', 'dirt', "king", "queen"]
     n = 100
     similar_words = find_similar(embeddings, target_words, n)
 

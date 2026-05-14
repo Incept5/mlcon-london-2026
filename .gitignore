@@ -45,3 +45,6 @@ TEACHER_NOTES.md
 
 # Vector DBs
 chroma_db/
+
+# Pickled data
+*.pkl
