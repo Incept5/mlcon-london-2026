@@ -5,20 +5,24 @@ Demo scripts accompanying a two-day workshop on practical LLM application develo
 ## Repository layout
 
 ```
-day_1_scripts/   Day 1: model providers, prompting, embeddings
-day_2_scripts/   Day 2: RAG, tool calling, MCP, vision, audio
+day_1_scripts/         Day 1: model providers, prompting, embeddings, vision, audio
+day_1_scripts/speech/  Day 1 TTS/STT demos (mlx-audio)
+day_2_scripts/         Day 2: RAG, tool calling, MCP, vision, audio
 day_2_scripts/data/    Sample texts, images, and audio used by the demos
 day_2_scripts/MCP/     Self-contained MCP server + Ollama client demo
+MLCon London 2026 - Hands-on GenAI Development Bootcamp Day 1.pdf   Day 1 slides
 requirements.txt
 ```
 
 ### Day 1 — talking to models
 
 - `basic_claude.py`, `basic_chatGPT.py`, `basic_groq.py`, `basic_mistral.py`, `basic_together.py`, `basic_fireworks.py`, `basic_grok.py` — minimal "hello world" against each provider.
-- `getting_started_ollama.py`, `getting_started_lm_studio.py`, `getting_started_groq.py` — first calls against local and hosted runtimes.
+- `getting_started_ollama.py`, `getting_started_ollama_params.py`, `getting_started_lm_studio.py`, `getting_started_groq.py` — first calls against local and hosted runtimes, including a variant that exposes sampling parameters.
 - `three_local_backends.py`, `local_performance_demo.py` — comparing local inference backends.
 - `embedding_demo.py`, `embedding_example.py`, `word_embeddings.py`, `3d_plot.html` — embeddings, similarity, and visualisation.
-- `logit_probabilities.py`, `simple_token_test.py`, `icr_demo.py` — tokens, logits, and intermediate model state.
+- `logit_probabilities.py`, `simple_token_test.py`, `icr_demo.py` — tokens, logits, and intermediate model state. `logit_probabilities.py` runs Qwen3 in no-think chat mode and visualises top-k token probabilities.
+- `vision_demo_ollama.py` (with `image.jpg`) — image understanding via Ollama (`qwen3.5:4b`).
+- `speech/tts.py`, `speech/tts-morgan.py`, `speech/stt.py` — text-to-speech and speech-to-text demos using `mlx-audio`, with a voice-cloning sample (`morgan-freeman-voice-sample.wav`).
 - `ai_astrology.py`, `ai_astrology_groq.py`, `together_chat.py` — slightly larger end-to-end prompts.
 
 ### Day 2 — building things with models
@@ -72,4 +76,6 @@ Demos that load sample data (texts, images, audio) read from `day_2_scripts/data
 ## Notes
 
 - `TOGETHER_KEY.txt` is gitignored; prefer `.env` for credentials.
+- Generated artefacts (e.g. `day_1_scripts/embeddings.pkl`) are gitignored via `*.pkl` — they are produced on first run.
 - The MCP demo has its own README with architecture diagram and troubleshooting tips: `day_2_scripts/MCP/README.md`.
+- Slides for Day 1 are in the repo root as `MLCon London 2026 - Hands-on GenAI Development Bootcamp Day 1.pdf`.
